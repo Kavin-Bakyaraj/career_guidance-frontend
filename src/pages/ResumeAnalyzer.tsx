@@ -45,7 +45,7 @@ const ResumeAnalyzer = () => {
         formData.append('resume', resumeFile);
         
         response = await axios.post(
-          'http://localhost:8000/api/analyze-resume/', 
+          'https://career-guiding-backend.vercel.app/api/analyze-resume/', 
           formData,
           {
             headers: {
@@ -55,7 +55,7 @@ const ResumeAnalyzer = () => {
         );
       } else {
         // Send resume text
-        response = await axios.post('http://localhost:8000/api/analyze-resume/', {
+        response = await axios.post('https://career-guiding-backend.vercel.app/api/analyze-resume/', {
           resumeText: resumeText
         });
       }

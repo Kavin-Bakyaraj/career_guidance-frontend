@@ -13,7 +13,7 @@ const LearningHub = () => {
     
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:8000/api/learning-resources/', {
+      const response = await axios.post('https://career-guiding-backend.vercel.app/api/learning-resources/', {
         searchTerm: searchTerm,
         skills: [searchTerm] // You can expand this to include more user skills
       });

@@ -29,7 +29,7 @@ const CareerRoadmap = () => {
     setRoadmap(null);
 
     try {
-      const response = await axios.post('http://localhost:8000/api/generate-roadmap/', {
+      const response = await axios.post('https://career-guiding-backend.vercel.app/api/generate-roadmap/', {
         skills: currentSkills.split(',').map(skill => skill.trim()).filter(Boolean),
         goal: careerGoal,
         experienceLevel: experienceLevel

@@ -15,7 +15,7 @@ const JobSearch = () => {
     setLoading(true);
     try {
       const skills = searchTerm.split(',').map(skill => skill.trim());
-      const response = await axios.post('http://localhost:8000/api/job-matches/', {
+      const response = await axios.post('https://career-guiding-backend.vercel.app/api/job-matches/', {
         skills: skills,
         location: location,
         experience: experience

@@ -12,7 +12,7 @@ const CareerInsights = () => {
   useEffect(() => {
     const fetchInsights = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/career-trends/?industry=${industry}&region=${region}`);
+        const response = await axios.get(`https://career-guiding-backend.vercel.app/api/career-trends/?industry=${industry}&region=${region}`);
         
         if (response.data.success) {
           const trendsData = response.data.trends;
